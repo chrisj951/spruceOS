@@ -80,7 +80,7 @@ cancel_update() {
 confirm_update() {
 	if [ ! -f "$SD_ROOT/$FW_FILE" ]; then
 		display -i "$BG_IMAGE" -d 2 -t "Moving firmware update file into place."
-		cp "$FW_DIR/$FW_FILE" "$SD_ROOT/"
+		7zr x "$FW_DIR/$FW_FILE.7z" -o"$SD_ROOT/"
 	fi
 	display -i "$BG_IMAGE" -t "Your $PLATFORM will now shut down. Please manually power your device back on while plugged in to complete the manufacturer firmware update. Once started, please be patient, as it will take a few minutes. It will power itself down again once complete." -p 140 -o
 	flag_add "first_boot_$PLATFORM"
