@@ -23,18 +23,21 @@ NEEDS_UPDATE=true
 
 case "$PLATFORM" in
 	"A30" )
+		SPACE_NEEDED=48
 		VERSION="$(cat /usr/miyoo/version)"
 		if [ "$VERSION" -ge 20240713100458 ]; then
 			NEEDS_UPDATE=false
 		fi
 		;;
 	"Flip" )
+		SPACE_NEEDED=384
 		VERSION="$(cat /usr/miyoo/version)"
 		if [ "$VERSION" -ge 20250228101926 ]; then
 			NEEDS_UPDATE=false
 		fi
 		;;
 	"Brick" )
+		SPACE_NEEDED=1280
 		VERSION="$(cat /etc/version)"
 		v_major="$(cut -d '.' -f 1 "$VERSION")"
 		# v_minor="$(cut -d '.' -f 2 "$VERSION")"
@@ -44,6 +47,7 @@ case "$PLATFORM" in
 		fi
 		;;
 	"SmartPro" )
+		SPACE_NEEDED=768
 		VERSION="$(cat /etc/version)"
 		v_major="$(cut -d '.' -f 1 "$VERSION")"
 		# v_minor="$(cut -d '.' -f 2 "$VERSION")"
@@ -95,12 +99,12 @@ fi
 
 display -i "$BG_IMAGE" -t "A firmware update from the manufacturer is ready for your device. We'll check your device's status and prepare the manufacturer update file. Once set up, the manufacturer firmware updater will install it." -o -p 160
 
-if [ "$FREE_SPACE" -lt 64 ]; then
+if [ "$FREE_SPACE" -lt "$SPACE_NEEDED" ]; then
 	log_message "firmwareUpdate.sh: Not enough free space on card. Aborting."
-	display -i "$BG_IMAGE" -o -t "Not enough free space. Please ensure at least 64 MiB of space is available on your SD card, then try again."
+	display -i "$BG_IMAGE" -o -t "Not enough free space. Please ensure at least $SPACE_NEEDED MiB of space is available on your SD card, then try again."
 	exit 1
 else
-	log_message "firmwareUpdate.sh: SD card contains at least 64MiB free space. Continuing."
+	log_message "firmwareUpdate.sh: SD card contains at least $SPACE_NEEDED MiB free space. Continuing."
 fi
 
 if [ "$CAPACITY" -lt 10 ]; then
