@@ -1,0 +1,5 @@
+NAME=muOS
+VERSION=2410-banana
+ID=muos-2410-banana
+VERSION_ID=2410
+PRETTY_NAME="muOS 2410 Banana"
