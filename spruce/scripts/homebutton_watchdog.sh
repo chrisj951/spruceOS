@@ -345,6 +345,10 @@ $BIN_PATH/getevent /dev/input/event3 -pid $$ | while read line; do
                   log_message "*** homebutton_watchdog.sh: RetroArch" -v
                     send_virtual_key_L3R3
 
+                elif pgrep "retroarch-flip" >/dev/null; then
+                  log_message "*** homebutton_watchdog.sh: RetroArch-Flip" -v
+                    send_virtual_key_L3R3
+
                 elif pgrep "PPSSPPSDL" >/dev/null; then
                   log_message "*** homebutton_watchdog.sh: PPSSPPSDL" -v
                     send_virtual_key_L3

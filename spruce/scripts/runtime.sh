@@ -111,9 +111,6 @@ log_message " " -v
 log_message "---------Starting up---------"
 log_message " " -v
 
-# import multipass.cfg and start watchdog for new network additions via MainUI
-nice -n 15 ${SCRIPTS_DIR}/wpa_watchdog.sh > /dev/null &
-
 # Sanitize system JSON if needed
 if ! jq '.' "$SYSTEM_JSON" > /dev/null 2>&1; then
     log_message "Runtime: Invalid System JSON detected, sanitizing..."

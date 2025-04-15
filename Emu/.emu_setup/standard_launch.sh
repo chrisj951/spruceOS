@@ -106,7 +106,6 @@ handle_network_services() {
 			if ifconfig wlan0 | grep "inet addr:" >/dev/null 2>&1; then
 				ifconfig wlan0 down &
 			fi
-			killall wpa_supplicant
 			killall udhcpc
 		fi
 	fi

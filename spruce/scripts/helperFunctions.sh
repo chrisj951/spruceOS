@@ -192,60 +192,6 @@ check_and_connect_wifi() {
         fi
     fi
 
-    if [ $connection_active -eq 0 ]; then
-        log_message "Attempting to connect to WiFi"
-
-        # Bring the existing interface down cleanly if its running
-        ifconfig wlan0 down
-        killall wpa_supplicant
-        killall udhcpc
-
-        # Restart the interface and try to connect
-        ifconfig wlan0 up
-        wpa_supplicant -B -i wlan0 -c /config/wpa_supplicant.conf
-        udhcpc -i wlan0 &
-
-        display --icon "/mnt/SDCARD/spruce/imgs/signal.png" -t "Waiting to connect....
-Press START to continue anyway."
-        {
-            while true; do
-                # Check for timeout
-                current_time=$(date +%s)
-                if [ $((current_time - start_time)) -ge $timeout ]; then
-                    echo "WiFi connection timed out" >> "$messages_file"
-                    break
-                fi
-
-                if ifconfig wlan0 | grep -qE "inet |inet6 " && ping -c 1 -W 3 1.1.1.1 >/dev/null 2>&1; then
-                    echo "Successfully connected to WiFi" >> "$messages_file"
-                    break
-                fi
-                sleep 0.5
-            done
-        } &
-        while true; do
-            inotifywait "$messages_file"
-            last_line=$(tail -n 1 "$messages_file")
-            case $last_line in
-            *"$B_START"* | *"$B_START_2"*)
-                log_message "WiFi connection cancelled by user"
-                display_kill
-                return 1
-                ;;
-            *"Successfully connected to WiFi"*)
-                log_message "Successfully connected to WiFi"
-                display_kill
-                return 0
-                ;;
-            *"WiFi connection timed out"*)
-                log_message "WiFi connection timed out after $timeout seconds"
-                display_kill
-                return 1
-                ;;
-            esac
-        done
-    fi
-
     return 0
 }
 
