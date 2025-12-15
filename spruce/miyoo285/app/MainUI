@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# This is sprigUI's entry point for taking over operation from the Miyoo Mini family device.
+# This script gets executed by /customer/main.
+
+
+##########     AT TIME OF BOOT     ##########
+
+. /mnt/SDCARD/spruce/scripts/helperFunctions.sh
+
+# auto shutdown if device powers on while lid is shut and plugged in
+CHARGING="$(get_charging_state)"
+LID="$(get_lid_state)"
+if [ "$CHARGING" -ne 0 ] && [ "$LID" -eq 0 ]; then
+    poweroff
+fi
+
+set_performance
+
+touch /mnt/SDCARD/sprig/bin/MainUI
+mount -o bind /mnt/SDCARD/spruce/miyoomini/bin/python /mnt/SDCARD/spruce/miyoomini/bin/MainUI
+mount -o bind /mnt/SDCARD/spruce/miyoomini/etc/profile /etc/profile
+mount -o bind /mnt/SDCARD/spruce/miyoomini/etc/passwd /etc/passwd
+mount -o bind /mnt/SDCARD/spruce/miyoomini/etc/group /etc/group
+
+##########     MAIN OPERATION LOOP     ##########
+
+cd /mnt/SDCARD
+export LD_LIBRARY_PATH="/mnt/SDCARD/spruce/miyoomini/lib:$LD_LIBRARY_PATH"
+/mnt/SDCARD/spruce/miyoomini/bin/adbd &
+
+cd /mnt/SDCARD/spruce/scripts
+./runtime.sh

@@ -465,6 +465,9 @@ runtime_mounts_SmartProS() {
    runtime_mounts_Brick
 }
 
+runtime_mounts_MiyooMiniFlip() {
+}
+
 runtime_mounts_Flip() {
 
     mount -o bind "${SPRUCE_ETC_DIR}/profile" /etc/profile &
