@@ -1,0 +1,29 @@
+{
+  "label": "Sega CD",
+  "icon": "segacd.png",
+  "iconsel": "segacd_sel.png",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "extlist": "chd|m3u|zip|7z|gen|smd|md|32x|cue|iso|sms|68k",
+  "launchlist": [
+    {
+      "name": "Generate M3U playlists for multi-disc games",
+      "launch": "/mnt/SDCARD/Emu/.emu_setup/m3u_generator.sh"
+    }
+  ],
+  "menuOptions": {
+    "Emulator": {
+      "display": "Retroarch Core",
+      "options": [
+        "picodrive",
+        "genesis_plus_gx"
+      ],
+      "selected": "picodrive",
+      "overrides": {}
+    }
+  },
+  "sortOrder": 5800,
+  "brand": "Sega",
+  "type": "homeconsole",
+  "releaseYear": 1991,
+  "default_emulator": "picodrive"
+}

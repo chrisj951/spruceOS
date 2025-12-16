@@ -1,0 +1,14 @@
+{
+  "label": "NeoGeo",
+  "icon": "neogeo.png",
+  "iconsel": "neogeo_sel.png",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "extlist": "zip|7z",
+  "launchlist": [],
+  "menuOptions": {},
+  "sortOrder": 4200,
+  "brand": "SNK",
+  "type": "homeconsole",
+  "releaseYear": 1990,
+  "default_emulator": "fbalpha2012"
+}

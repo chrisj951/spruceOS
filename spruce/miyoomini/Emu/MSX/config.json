@@ -1,0 +1,24 @@
+{
+  "label": "MSX",
+  "icon": "msx.png",
+  "iconsel": "msx_sel.png",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "extlist": "zip|7z|rom|mx1|mx2|dsk|cas|m3u",
+  "launchlist": [],
+  "menuOptions": {
+    "Emulator": {
+      "display": "Retroarch Core",
+      "options": [
+        "bluemsx",
+        "fmsx"
+      ],
+      "selected": "bluemsx",
+      "overrides": {}
+    }
+  },
+  "sortOrder": 3800,
+  "brand": "Misc",
+  "type": "pc",
+  "releaseYear": 1983,
+  "default_emulator": "bluemsx"
+}

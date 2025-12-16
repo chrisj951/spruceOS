@@ -1,0 +1,24 @@
+{
+  "label": "Genesis",
+  "icon": "md.png",
+  "iconsel": "md_sel.png",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "extlist": "zip|7z|gen|smd|md|32x|bin|iso|sms|68k|chd",
+  "launchlist": [],
+  "menuOptions": {
+    "Emulator": {
+      "display": "Retroarch Core",
+      "options": [
+        "picodrive",
+        "genesis_plus_gx"
+      ],
+      "selected": "picodrive",
+      "overrides": {}
+    }
+  },
+  "sortOrder": 3000,
+  "brand": "Sega",
+  "type": "homeconsole",
+  "releaseYear": 1988,
+  "default_emulator": "picodrive"
+}

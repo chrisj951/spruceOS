@@ -1,0 +1,14 @@
+{
+  "label": "Odyssey2",
+  "icon": "ody.png",
+  "iconsel": "ody_sel.png",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "extlist": "bin|zip|7z",
+  "launchlist": [],
+  "menuOptions": {},
+  "sortOrder": 4600,
+  "brand": "Magnavox",
+  "type": "homeconsole",
+  "releaseYear": 1972,
+  "default_emulator": "o2em"
+}

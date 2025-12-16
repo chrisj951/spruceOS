@@ -1,0 +1,25 @@
+{
+  "label": "Sega MS",
+  "icon": "ms.png",
+  "iconsel": "ms_sel.png",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "extlist": "gen|smd|md|32x|bin|iso|sms|68k|chd|zip|7z",
+  "launchlist": [],
+  "menuOptions": {
+    "Emulator": {
+      "display": "Retroarch Core",
+      "options": [
+        "genesis_plus_gx",
+        "picodrive",
+        "gearsystem"
+      ],
+      "selected": "genesis_plus_gx",
+      "overrides": {}
+    }
+  },
+  "sortOrder": 5900,
+  "brand": "Sega",
+  "type": "homeconsole",
+  "releaseYear": 1986,
+  "default_emulator": "genesis_plus_gx"
+}

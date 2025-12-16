@@ -1,0 +1,14 @@
+{
+  "label": "Pokemini",
+  "icon": "poke.png",
+  "iconsel": "poke_sel.png",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "extlist": "min|zip|7z",
+  "launchlist": [],
+  "menuOptions": {},
+  "sortOrder": 4900,
+  "brand": "Nintendo",
+  "type": "handheld",
+  "releaseYear": 2001,
+  "default_emulator": "pokemini"
+}

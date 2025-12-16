@@ -1,0 +1,14 @@
+{
+  "label": "Quake",
+  "icon": "quake.png",
+  "iconsel": "quake_sel.png",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "extlist": "fbl|pak",
+  "launchlist": [],
+  "menuOptions": {},
+  "sortOrder": 5300,
+  "brand": "modernengine",
+  "type": "fantasy",
+  "releaseYear": 1996,
+  "default_emulator": "tyrquake"
+}

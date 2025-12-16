@@ -1,0 +1,25 @@
+{
+  "label": "SG-1000",
+  "icon": "segasgone.png",
+  "iconsel": "segasgone_sel.png",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "extlist": "zip|7z|sms|gg|sg|mv|bin|rom",
+  "launchlist": [],
+  "menuOptions": {
+    "Emulator": {
+      "display": "Retroarch Core",
+      "options": [
+        "genesis_plus_gx",
+        "bluemsx",
+        "gearsystem"
+      ],
+      "selected": "genesis_plus_gx",
+      "overrides": {}
+    }
+  },
+  "sortOrder": 6000,
+  "brand": "Sega",
+  "type": "homeconsole",
+  "releaseYear": 1983,
+  "default_emulator": "genesis_plus_gx"
+}

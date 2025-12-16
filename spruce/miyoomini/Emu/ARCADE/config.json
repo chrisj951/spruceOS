@@ -1,0 +1,26 @@
+{
+  "label": "Arcade",
+  "icon": "arcade.png",
+  "iconsel": "arcade_sel.png",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "extlist": "zip",
+  "launchlist": [],
+  "menuOptions": {
+    "Emulator": {
+      "display": "Retroarch Core",
+      "options": [
+        "fbneo",
+        "mame2003_plus",
+        "km_mame2003_xtreme",
+        "fbalpha2012"
+      ],
+      "selected": "fbneo",
+      "overrides": {}
+    }
+  },
+  "sortOrder": 300,
+  "brand": "Arcade",
+  "type": "arcade",
+  "releaseYear": 1971,
+  "default_emulator": "fbneo"
+}

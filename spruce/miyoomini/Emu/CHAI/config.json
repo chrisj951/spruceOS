@@ -1,0 +1,14 @@
+{
+  "label": "ChaiLove",
+  "icon": "chai.png",
+  "iconsel": "chai_sel.png",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "extlist": "chailove",
+  "launchlist": [],
+  "menuOptions": {},
+  "sortOrder": 1200,
+  "brand": "modernengine",
+  "type": "Other",
+  "releaseYear": 2016,
+  "default_emulator": "chailove"
+}

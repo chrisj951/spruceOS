@@ -1,0 +1,14 @@
+{
+  "label": "DOOM",
+  "icon": "doom.png",
+  "iconsel": "doom_sel.png",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "extlist": "zip|wad|exe",
+  "launchlist": [],
+  "menuOptions": {},
+  "sortOrder": 2000,
+  "brand": "idSoftware",
+  "type": "modernengine",
+  "releaseYear": 1995,
+  "default_emulator": "prboom"
+}

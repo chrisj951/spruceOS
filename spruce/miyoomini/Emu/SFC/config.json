@@ -1,0 +1,26 @@
+{
+  "label": "SNES",
+  "icon": "sfc.png",
+  "iconsel": "sfc_sel.png",
+  "themecolor": "FF0000",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "extlist": "zip|7z|smc|sfc|fig|gd3|gd7|dx2|bsx|bs|swc|st",
+  "launchlist": [],
+  "menuOptions": {
+    "Emulator": {
+      "display": "Retroarch Core",
+      "options": [
+        "mednafen_supafaust",
+        "snes9x",
+        "snes9x_2005"
+      ],
+      "selected": "mednafen_supafaust",
+      "overrides": {}
+    }
+  },
+  "sortOrder": 6200,
+  "brand": "Nintendo",
+  "type": "homeconsole",
+  "releaseYear": 1990,
+  "default_emulator": "mednafen_supafaust"
+}

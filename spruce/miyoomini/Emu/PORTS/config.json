@@ -1,0 +1,15 @@
+{
+  "label": "PORTS",
+  "icon": "ports.png",
+  "iconsel": "ports_sel.png",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "ingamemenu": 1,
+  "extlist": "sh",
+  "launchlist": [],
+  "menuOptions": {},
+  "sortOrder": 5000,
+  "brand": "Other",
+  "type": "other",
+  "releaseYear": 2000,
+  "default_emulator": "sh"
+}

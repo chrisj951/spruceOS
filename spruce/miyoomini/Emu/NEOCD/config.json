@@ -1,0 +1,19 @@
+{
+  "label": "Neo CD",
+  "icon": "neocd.png",
+  "iconsel": "neocd_sel.png",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "extlist": "cue|chd|m3u",
+  "launchlist": [
+    {
+      "name": "Generate M3U playlists for multi-disc games",
+      "launch": "/mnt/SDCARD/Emu/.emu_setup/m3u_generator.sh"
+    }
+  ],
+  "menuOptions": {},
+  "sortOrder": 4100,
+  "brand": "SNK",
+  "type": "homeconsole",
+  "releaseYear": 1994,
+  "default_emulator": "neocd"
+}

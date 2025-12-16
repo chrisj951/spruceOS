@@ -1,0 +1,25 @@
+{
+  "label": "GB",
+  "icon": "gb.png",
+  "iconsel": "gb_sel.png",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "extlist": "gb|gbc|zip|7z|bin|dmg",
+  "launchlist": [],
+  "menuOptions": {
+    "Emulator": {
+      "display": "Retroarch Core",
+      "options": [
+        "gambatte",
+        "mgba",
+        "tgbdual"
+      ],
+      "selected": "gambatte",
+      "overrides": {}
+    }
+  },
+  "sortOrder": 2700,
+  "brand": "Nintendo",
+  "type": "handheld",
+  "releaseYear": 1989,
+  "default_emulator": "gambatte"
+}

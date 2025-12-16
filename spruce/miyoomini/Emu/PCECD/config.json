@@ -1,0 +1,19 @@
+{
+  "label": "TG-CD",
+  "icon": "pcecd.png",
+  "iconsel": "pcecd_sel.png",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "extlist": "iso|img|chd|pce|ccd|cue|zip|7z",
+  "launchlist": [
+    {
+      "name": "Generate M3U playlists for multi-disc games",
+      "launch": "/mnt/SDCARD/Emu/.emu_setup/m3u_generator.sh"
+    }
+  ],
+  "menuOptions": {},
+  "sortOrder": 6700,
+  "brand": "NEC",
+  "type": "homeconsole",
+  "releaseYear": 1988,
+  "default_emulator": "mednafen_pce_fast"
+}

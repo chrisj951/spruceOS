@@ -1,0 +1,19 @@
+{
+  "label": "PSX",
+  "icon": "ps.png",
+  "iconsel": "ps_sel.png",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "extlist": "m3u|chd|cue|img|mdf|pbp|PBP|toc|cbn",
+  "launchlist": [
+    {
+      "name": "Generate M3U playlists for multi-disc games",
+      "launch": "/mnt/SDCARD/Emu/.emu_setup/m3u_generator.sh"
+    }
+  ],
+  "menuOptions": {},
+  "sortOrder": 5200,
+  "brand": "Sony",
+  "type": "homeconsole",
+  "releaseYear": 1994,
+  "default_emulator": "pcsx_rearmed"
+}

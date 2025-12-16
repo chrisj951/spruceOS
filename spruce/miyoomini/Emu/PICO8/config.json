@@ -1,0 +1,27 @@
+{
+  "label": "Pico-8",
+  "icon": "pico.png",
+  "iconsel": "pico_sel.png",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "requiredfiles": [
+    [
+      "/mnt/SDCARD/BIOS/pico8.dat"
+    ],
+    [
+      "/mnt/SDCARD/BIOS/pico8_dyn"
+    ]
+  ],
+  "extlist": "p8|png|splore",
+  "launchlist": [
+    {
+      "name": "Import carts from Splore to sprigUI",
+      "launch": "import.sh"
+    }
+  ],
+  "menuOptions": {},
+  "sortOrder": 4800,
+  "brand": "modernengine",
+  "type": "fantasy",
+  "releaseYear": 2015,
+  "default_emulator": "mednafen_pce_fast"
+}

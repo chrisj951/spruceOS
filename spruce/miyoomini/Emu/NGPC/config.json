@@ -1,0 +1,24 @@
+{
+  "label": "NGPC",
+  "icon": "ngpc.png",
+  "iconsel": "ngpc_sel.png",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "extlist": "ngp|ngc|zip|7z",
+  "launchlist": [],
+  "menuOptions": {
+    "Emulator": {
+      "display": "Retroarch Core",
+      "options": [
+        "mednafen_ngp",
+        "race"
+      ],
+      "selected": "mednafen_ngp",
+      "overrides": {}
+    }
+  },
+  "sortOrder": 4500,
+  "brand": "SNK",
+  "type": "handheld",
+  "releaseYear": 1999,
+  "default_emulator": "mednafen_ngp"
+}

@@ -10,6 +10,8 @@ get_python_path() {
         echo "/mnt/SDCARD/spruce/bin/python/bin/python3.10"
     elif [ "$PLATFORM" = "Brick" ] || [ "$PLATFORM" = "SmartPro" ]|| [ "$PLATFORM" = "SmartProS" ] || [ "$PLATFORM" = "Flip" ]; then
         echo "/mnt/SDCARD/spruce/flip/bin/python3.10"
+    elif [ "$PLATFORM" = "MIYOO_MINI_FLIP" ]; then
+        echo "/mnt/SDCARD/spruce/miyoomini/bin/python"
     fi
 }
 
@@ -656,10 +658,12 @@ reset_playback_pack() {
     current_path=$(amixer cget name="Playback Path" | grep  -o ": values=[0-9]*" | grep -o [0-9]*)
     system_json_volume=$(cat $SYSTEM_JSON | grep -o '"vol":\s*[0-9]*' | grep -o [0-9]*)
     current_vol_name="SYSTEM_VOLUME_$system_json_volume"
-    amixer sset 'SPK' 1% > /dev/null
+    
+    eval vol_value=\$$current_vol_name
+    
+    amixer sset 'SPK' "$vol_value%" > /dev/null
     amixer cset name='Playback Path' 0 > /dev/null
     amixer cset name='Playback Path' "$current_path" > /dev/null
-    amixer sset 'SPK' "$SYSTEM_VOLUME_${!current_vol_name}"% > /dev/null
   fi 
 }
 

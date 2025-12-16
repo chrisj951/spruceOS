@@ -1,0 +1,24 @@
+{
+  "label": "Atari Lynx",
+  "icon": "lynx.png",
+  "iconsel": "lynx_sel.png",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "extlist": "lnx|zip",
+  "launchlist": [],
+  "menuOptions": {
+    "Emulator": {
+      "display": "Retroarch Core",
+      "options": [
+        "handy",
+        "mednafen_lynx"
+      ],
+      "selected": "handy",
+      "overrides": {}
+    }
+  },
+  "sortOrder": 900,
+  "brand": "Atari",
+  "type": "handheld",
+  "releaseYear": 1989,
+  "default_emulator": "handy"
+}

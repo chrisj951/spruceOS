@@ -1,0 +1,28 @@
+{
+  "label": "TIC-80",
+  "icon": "tic.png",
+  "iconsel": "tic_sel.png",
+  "launch": "../.emu_setup/standard_launch.sh",
+  "extlist": "tic|zip|7z|fd|sap|k7|m7|rom",
+  "launchlist": [],
+  "menuOptions": {
+    "Governor": {
+      "display": "CPU",
+      "devices": [
+        "SPRIG_MIYOO_MINI_FLIP"
+      ],
+      "options": [
+        "SMART",
+        "Performance",
+        "Overclock"
+      ],
+      "selected": "Smart",
+      "overrides": {}
+    }
+  },
+  "sortOrder": 6800,
+  "brand": "modernengine",
+  "type": "fantasy",
+  "releaseYear": 2010,
+  "default_emulator": "tic80"
+}
