@@ -167,11 +167,7 @@ run_retroarch() {
 	/mnt/SDCARD/spruce/scripts/asound-setup.sh "$RA_DIR"
 
 	RA_PARAMS="-v"
-	case "$PLATFORM" in
-		"Pixel2"|"Flip"|"SmartPro"|"SmartProS"|"Brick"|"A30"|"Anbernic"*)
-			RA_PARAMS="${RA_PARAMS} --config ${CURRENT_CFG}"
-			;;
-	esac
+	RA_PARAMS="${RA_PARAMS} --config ${CURRENT_CFG}"
 
 	# Prevent SDL2 from applying Xbox 360 gamecontroller mapping to the
 	# MIYOO Pad1 virtual joypad (shares vendor:product 045e:028e with Xbox).
