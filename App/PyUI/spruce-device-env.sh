@@ -141,3 +141,4 @@ spruce_env_default STATE_PATH "/mnt/SDCARD/Saves/pyui-state.json"
 unset _button _buttons _rest _setting
 
 spruce_env_default BACKLIGHT_CMD "source /mnt/SDCARD/spruce/scripts/helperFunctions.sh && set_backlight"
+spruce_env_default ROM_SETUP "MIYOO"
